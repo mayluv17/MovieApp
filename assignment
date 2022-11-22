@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+      What Is HTML? Hypertext Markup Language Basics Explained
+  
+    </h2>
+    <p>
+       It is a standard markup language for creating web pages. It enables the development and structuring of sections, paragraphs, and connections through the use of HTML elements (web page building pieces) such as tags and attributes.
+HTML has numerous applications.
+    </p>
+<p>
+    It is also worth emphasizing that HTML is not a programming language because it cannot develop dynamic functionality.
+</p>
+
+<p>
+Every HTML page contains a collection of HTML elements, which include tags and attributes. HTML components are the foundation of a web page. A tag tells the web browser where an element begins and finishes, whereas an attribute describes an element's properties.
+An element's three primary components are:
+Opening tag 
+<ol>
+   <li> Used to specify when an element begins to take effect. The tag is wrapped with opening and closing angle brackets. For example, use the start tag 
+    &lt;p&gt to create a paragraph</li> 
+
+<li>
+This is the output that other users see. 
+</li>
+<li>
+    Closing tag – the same as the opening tag, but with a forward slash before the element name. For example, &lt;/p&gt to end a paragraph. 
+    
+</li>
+</ol>
+
+<h4>Examples</h4>
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+<h4>Basic Structure of an HTML </h4>
+<pre>
+ &lt;!DOCTYPE html&gt<br/>
+ &lt;html&gt<br/>
+        &lt;head&gt<br/>
+    <!-- META INFORMATION -->  
+        &lt;/head&gt<br/>
+        &lt;body&gt<br/>
+    <!-- PAGE CONTENT -->
+        &lt;/body&gt<br/>
+&lt;/html&gt<br/>
+</pre>
+
+<li>
+<strong>&lt;html&gt</strong> tag is the root element that defines the whole HTML document. This tells the browser the eclosed elements are HTML and should be readed as it.
+</li>
+<li>
+<strong>&lt;head&gt</strong> tag holds meta information such as the page’s title and charset. That is also where external files such as CSS files and declared
+</li>
+<li>
+<strong>&lt;body&gt</strong> tag encloses all the content that appears on the page. That's where all the visible content of the webpage goes
+</li>
+<li>
+<strong>&lt;p&gt</strong> Paragraph tags – are all enclosed by using the tag.
+</li>
+
+<p>Most HTML elements have an opening and a closing tag, but some elements do not need closing tags to work, such as empty elements. These elements do not use an end tag because they do not have content:
+</p>
+<li>
+<strong>&lt;img /&gt</strong> This image tag has two attributes – an src attribute, the image path, and an alt attribute, the descriptive text. However, it does not have content nor an end tag. Example below
+<br />
+<br />
+&lt;img src="/" alt="Image"&gt 
+
+</li>
+<img width="200" src="https://www.edunation.co/wp-content/uploads/2020/12/LAB-Lahti-campus-main-entrance-2020-008-scaled.jpg" alt="helsinki"/>
+
+<li>
+<strong>&lt;a&gt</strong> Hyperlinks are also inline elements that use an <a> tag and an href attribute to indicate the link’s destination, but also have a closing tag. Example below <br />
+&lt;a href="https://example.com/"&gt Click me!&lt;/a&gt 
+<br />
+<a href="example.com">A sample link</a>
+</li>
+
+<li>
+    <strong>&lt;br/&gt</strong> This is self closing tag. It use use to break tex into a new line. Just like <br /> this one right here
+</li>
+
+
+<p>The heading tag has six variation. Its varies in size from 1 to 6, 1 being the biggest and 6 the smallest</p>
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+Learn more about HTML <a href="https://www.w3schools.com/html/html_intro.asp">here</a>
+</body>
+</html>
