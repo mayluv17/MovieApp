@@ -37,7 +37,7 @@ function displayMovie(movie) {
                              <h3><a href="https://www.imdb.com/title/${
                                movie.imdbID
                              }/">${movie.Title}</a></h3>
-                            <img class="rating--img" src="img/star-icon.png" />
+                            <img class="rating--img" src="img/star-Icon.png" />
                             <p>${movie.imdbRating}</p>
                           </div>
                           <div class="break"></div>
