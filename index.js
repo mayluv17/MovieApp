@@ -68,7 +68,7 @@ function displayMovie(movie) {
 }
 
 function getMovieDetails(id) {
-  fetch(`http://www.omdbapi.com/?i=${id}&apikey=3f29dea`)
+  fetch(`https://www.omdbapi.com/?i=${id}&apikey=3f29dea`)
     .then((res) => res.json())
     .then((data) => {
       displayMovie(data);
@@ -78,12 +78,12 @@ function getMovieDetails(id) {
 if (searchInput) {
   searchInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
-      getMovie(searchInput.value);
+      getMovies(searchInput.value);
     }
   });
 }
 
-function getMovie(query) {
+function getMovies(query) {
   resultContainer.innerHTML = "";
   resultContainer.classList.remove("result--container");
   fetch(`https://www.omdbapi.com/?s=${query}&apikey=3f29dea`)
