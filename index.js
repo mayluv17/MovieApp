@@ -5,7 +5,8 @@ let watchlistArray = JSON.parse(localStorage.getItem("watchlist") || "[]");
 // console.log(watchlistArray);
 
 function addOrRemoveWhatchlist(e) {
-  if (watchlistArray.includes(e.target.id)) {
+  const isOnwatchList = watchlistArray.includes(e.target.id);
+  if (isOnwatchList) {
     watchlistArray = watchlistArray.filter((movie) => movie !== e.target.id);
     e.target.innerHTML = `<img src="img/Icon2.png" class="btn-list" /> Add to Watchlist`;
     removeWatchfromDOM(e);
@@ -82,7 +83,7 @@ if (searchInput) {
 function getMovie(query) {
   resultContainer.innerHTML = "";
   resultContainer.classList.remove("result--container");
-  fetch(`http://www.omdbapi.com/?s=${query}&apikey=3f29dea`)
+  fetch(`https://www.omdbapi.com/?s=${query}&apikey=3f29dea`)
     .then((res) => res.json())
     .then((data) => {
       if (data.Response === "True") {
