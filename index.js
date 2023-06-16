@@ -1,11 +1,13 @@
 const searchInput = document.getElementById("search--input");
 const resultContainer = document.getElementById("result--wrap");
 let watchlistArray = JSON.parse(localStorage.getItem("watchlist") || "[]");
-// localStorage.clear();
-// console.log(watchlistArray);
 
+function saveWatchlist() {
+  localStorage.setItem("watchlist", JSON.stringify(watchlistArray));
+}
 function addOrRemoveWhatchlist(e) {
   const isOnwatchList = watchlistArray.includes(e.target.id);
+
   if (isOnwatchList) {
     watchlistArray = watchlistArray.filter((movie) => movie !== e.target.id);
     e.target.innerHTML = `<img src="img/Icon2.png" class="btn-list" /> Add to Watchlist`;
@@ -14,7 +16,7 @@ function addOrRemoveWhatchlist(e) {
     watchlistArray.push(e.target.id);
     e.target.innerHTML = `<img src="img/Icon.png" class="btn-list" /> Remove from Watchlist`;
   }
-  localStorage.setItem("watchlist", JSON.stringify(watchlistArray));
+  saveWatchlist();
 }
 
 function displayMovie(movie) {
@@ -64,6 +66,7 @@ function displayMovie(movie) {
   resultContainer.classList.add("result--container");
   resultContainer.innerHTML += resultHTML;
 }
+
 function getMovieDetails(id) {
   fetch(`http://www.omdbapi.com/?i=${id}&apikey=3f29dea`)
     .then((res) => res.json())
@@ -71,15 +74,15 @@ function getMovieDetails(id) {
       displayMovie(data);
     });
 }
+
 if (searchInput) {
-  //check if search input is on the page before binding
   searchInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
-      // event.preventDefault();
       getMovie(searchInput.value);
     }
   });
 }
+
 function getMovie(query) {
   resultContainer.innerHTML = "";
   resultContainer.classList.remove("result--container");
